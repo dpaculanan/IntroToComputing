@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#596a33">
+	<title>Dave's Humble Abode</title>
+	<link rel="icon" type="image/png" href="assets/owl.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<!-- dave made this. yeah, he's kinda cute. -->
+	<div class="page-shell">
+		<header class="site-header">
+			<div class="topbar">
+				<a class="wordmark" href="#home" aria-label="Dave's Humble Abode">
+					<img class="mark" src="assets/owl.png" alt="" aria-hidden="true">
+					<span>DAVE'S<br>HUMBLE ABODE</span>
+				</a>
+				<div class="topbar-note"><span class="status-dot"></span> INTRO TO COMPUTING <span class="note-divider">/</span> 2026</div>
+			</div>
+			<nav class="site-nav" aria-label="Main navigation">
+				<a class="nav-link active" href="#home" data-page="home" aria-current="page">Home</a>
+				<details class="projects-menu">
+					<summary class="nav-link">Projects <span class="menu-chevron" aria-hidden="true">⌄</span></summary>
+					<div class="projects-dropdown">
+						<a href="#project-conversion" data-page="conversion"><span>01</span> Conversion</a>
+						<a href="#project-tax" data-page="tax"><span>02</span> Income tax</a>
+						<a href="#project-sequences" data-page="sequences"><span>03</span> Number loops</a>
+						<a href="#project-payroll" data-page="payroll"><span>04</span> Payroll</a>
+					</div>
+				</details>
+			</nav>
+		</header>
+
+		<main id="home">
+			<div class="home-view" id="home-view">
+				<section class="intro" aria-labelledby="page-title">
+					<div class="intro-copy">
+						<p class="eyebrow">A LITTLE CORNER OF THE INTERNET</p>
+						<h1 id="page-title">Hi, I’m Dave.<br><span>I make things.</span></h1>
+						<p class="intro-text">I’m a curious learner who likes turning ideas into useful little projects. Here are four things I’ve been building—come have a peek.</p>
+					</div>
+					<div class="portrait-wrap">
+						<img class="portrait" src="assets/DaveFace.jpg" alt="Dave smiling">
+						<span class="portrait-note" aria-hidden="true">the cutie<br>behind the code <span>✳</span></span>
+					</div>
+				</section>
+				<section class="home-projects" aria-labelledby="projects-title">
+					<!-- a few little things dave cooked up. look at him go. -->
+					<div class="home-projects-heading">
+						<div><p class="eyebrow">PICK A PATH <span>✳</span></p><h2 id="projects-title">A few things I made</h2></div>
+						<p>Four small projects, each with a little something to try.</p>
+					</div>
+					<div class="project-grid">
+						<a class="project-card card-conversion" href="#project-conversion">
+							<div class="card-topline"><span>01 / A HANDY TOOL</span><span class="card-spark" aria-hidden="true">✳</span></div>
+							<div class="card-art art-conversion" aria-hidden="true"><span>°C</span><i>↔</i><span>°F</span></div>
+							<div class="card-copy"><h3>Unit converter</h3><p>Give measurements a little makeover.</p><span class="card-cta">Take a look <b aria-hidden="true">↗</b></span></div>
+						</a>
+						<a class="project-card card-tax" href="#project-tax">
+							<div class="card-topline"><span>02 / THE NUMBERS</span><span class="card-spark" aria-hidden="true">✳</span></div>
+							<div class="card-art art-tax" aria-hidden="true"><span>₱</span><i>+ − ×</i></div>
+							<div class="card-copy"><h3>Income tax</h3><p>A friendly calculator for the fine print.</p><span class="card-cta">Take a look <b aria-hidden="true">↗</b></span></div>
+						</a>
+						<a class="project-card card-sequences" href="#project-sequences">
+							<div class="card-topline"><span>03 / A LOOP-DE-LOOP</span><span class="card-spark" aria-hidden="true">✳</span></div>
+							<div class="card-art art-sequences" aria-hidden="true"><span>1</span><i>→</i><span>n</span></div>
+							<div class="card-copy"><h3>Number loops</h3><p>Three loops, one curious little number.</p><span class="card-cta">Take a look <b aria-hidden="true">↗</b></span></div>
+						</a>
+						<a class="project-card card-payroll" href="#project-payroll">
+							<div class="card-topline"><span>04 / WORKING IT OUT</span><span class="card-spark" aria-hidden="true">✳</span></div>
+							<div class="card-art art-payroll" aria-hidden="true"><span>₱</span><i>☼</i><span>✓</span></div>
+							<div class="card-copy"><h3>Simple payroll</h3><p>Add employees and manage the payroll list.</p><span class="card-cta">Take a look <b aria-hidden="true">↗</b></span></div>
+						</a>
+					</div>
+				</section>
+			</div>
+
+			<section class="workspace" aria-live="polite" hidden>
+				<a class="back-home" href="#home">← Back to all projects</a>
+				<div class="workspace-heading">
+					<div>
+						<p class="eyebrow" id="assignment-label">ASSIGNMENT 01 <span>/</span> CONVERSION</p>
+						<h2 id="assignment-title">Convert a unit.</h2>
+					</div>
+					<span class="worksheet-tag"><span class="tag-dot"></span> INTERACTIVE WORKSHEET</span>
+				</div>
+
+				<section class="assignment-panel active" id="project-conversion" aria-labelledby="assignment-title">
+					<div class="panel-intro">
+						<div class="panel-index">01 <span>—</span> 04</div>
+						<div><h3>Same measurement,<br>different language.</h3><p>Choose a conversion, enter a value, and see the answer.</p></div>
+					</div>
+					<div class="tool-area">
+						<div class="tool-controls">
+							<label class="field-label" for="conversion-type">CONVERT</label>
+							<select id="conversion-type" class="select-control">
+								<option value="c-to-f">Celsius to Fahrenheit</option>
+								<option value="f-to-c">Fahrenheit to Celsius</option>
+								<option value="m-to-ft">Meters to Feet</option>
+								<option value="ft-to-m">Feet to Meters</option>
+							</select>
+							<label class="field-label" for="conversion-value">VALUE <span id="conversion-unit">°C</span></label>
+							<div class="input-with-unit"><input id="conversion-value" type="number" step="any" placeholder="e.g. 24" inputmode="decimal"><span id="conversion-unit-suffix">°C</span></div>
+							<button class="calculate-button" id="convert-button" type="button">Convert <span aria-hidden="true">→</span></button>
+						</div>
+						<div class="result-block" id="conversion-result" aria-live="polite">
+							<span class="result-label">YOUR RESULT</span>
+							<p class="result-placeholder">The answer will appear here.</p>
+						</div>
+					</div>
+					<p class="formula-note" id="conversion-formula">Formula: °F = (°C × 9/5) + 32</p>
+					<details class="code-disclosure">
+						<summary>See the spaghetti wires</summary>
+						<p class="code-caption">The conversion options and math from <code>script.js</code>.</p>
+						<pre><code>const conversionOptions = {
+  'c-to-f': {
+    from: '°C', to: '°F', formula: 'Formula: °F = (°C × 9/5) + 32',
+    convert: (value) =&gt; value * 9 / 5 + 32
+  },
+  'f-to-c': {
+    from: '°F', to: '°C', formula: 'Formula: °C = (°F − 32) × 5/9',
+    convert: (value) =&gt; (value - 32) * 5 / 9
+  },
+  'm-to-ft': {
+    from: 'm', to: 'ft', formula: 'Formula: feet = meters × 3.28084',
+    convert: (value) =&gt; value * 3.28084
+  },
+  'ft-to-m': {
+    from: 'ft', to: 'm', formula: 'Formula: meters = feet × 0.3048',
+    convert: (value) =&gt; value * 0.3048
+  }
+};
+
+const rawValue = conversionInput.value.trim();
+const option = conversionOptions[conversionType.value];
+const value = Number(rawValue);
+const answer = option.convert(value);</code></pre>
+					</details>
+				</section>
+
+				<section class="assignment-panel" id="project-tax" aria-labelledby="assignment-title" hidden>
+					<div class="panel-intro">
+						<div class="panel-index">02 <span>—</span> 04</div>
+						<div><h3>Make the numbers<br>add up.</h3><p>Enter your taxable income in pesos to calculate the income tax from the table.</p></div>
+					</div>
+					<div class="tool-area">
+						<div class="tool-controls">
+							<label class="field-label" for="tax-income">TAXABLE INCOME</label>
+							<div class="input-with-unit"><span class="unit-prefix">₱</span><input id="tax-income" type="number" min="0" step="any" placeholder="e.g. 320000" inputmode="decimal"><span class="unit-suffix">PHP</span></div>
+							<button class="calculate-button" id="tax-button" type="button">Calculate tax <span aria-hidden="true">→</span></button>
+						</div>
+						<div class="result-block" id="tax-result" aria-live="polite">
+							<span class="result-label">INCOME TAX</span>
+							<p class="result-placeholder">Your tax amount will appear here.</p>
+						</div>
+					</div>
+					<div class="tax-reference">
+						<p class="tax-reference-title">INCOME TAX = BASIC TAX + RATE</p>
+						<div class="tax-table-wrap" tabindex="0" aria-label="Income tax brackets and examples">
+							<table class="tax-table">
+								<thead><tr><th>Over</th><th>But not over</th><th>Basic tax + rate</th><th>Example income</th><th>Income tax</th></tr></thead>
+								<tbody>
+									<tr><td>₱0</td><td>₱250,000</td><td>0%</td><td>₱180,000</td><td>₱0</td></tr>
+									<tr><td>₱250,000</td><td>₱400,000</td><td>20% of excess over ₱250,000</td><td>₱320,000</td><td>₱14,000</td></tr>
+									<tr><td>₱400,000</td><td>₱800,000</td><td>₱30,000 + 25% of excess over ₱400,000</td><td>₱520,000</td><td>₱60,000</td></tr>
+									<tr><td>₱800,000</td><td>₱2,000,000</td><td>₱130,000 + 30% of excess over ₱800,000</td><td>₱930,000</td><td>₱169,000</td></tr>
+									<tr><td>₱2,000,000</td><td>₱8,000,000</td><td>₱490,000 + 32% of excess over ₱2,000,000</td><td>₱2,400,000</td><td>₱618,000</td></tr>
+									<tr><td>₱8,000,000</td><td>No limit</td><td>₱2,410,000 + 35% of excess over ₱8,000,000</td><td>₱10,000,000</td><td>₱3,110,000</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<details class="code-disclosure">
+						<summary>See the spaghetti wires</summary>
+						<p class="code-caption">The tax brackets and calculation from <code>script.js</code>.</p>
+						<pre><code>const taxableIncome = Number(incomeInput.value);
+let basicTax = 0;
+let rate = 0;
+let bracketFloor = 0;
+let formula = '0%';
+
+if (taxableIncome &lt;= 250000) {
+  formula = '0%';
+} else if (taxableIncome &lt;= 400000) {
+  bracketFloor = 250000;
+  rate = 0.20;
+  formula = '20% of excess over ₱250,000';
+} else if (taxableIncome &lt;= 800000) {
+  basicTax = 30000;
+  bracketFloor = 400000;
+  rate = 0.25;
+  formula = '₱30,000 + 25% of excess over ₱400,000';
+} else if (taxableIncome &lt;= 2000000) {
+  basicTax = 130000;
+  bracketFloor = 800000;
+  rate = 0.30;
+  formula = '₱130,000 + 30% of excess over ₱800,000';
+} else if (taxableIncome &lt;= 8000000) {
+  basicTax = 490000;
+  bracketFloor = 2000000;
+  rate = 0.32;
+  formula = '₱490,000 + 32% of excess over ₱2,000,000';
+} else {
+  basicTax = 2410000;
+  bracketFloor = 8000000;
+  rate = 0.35;
+  formula = '₱2,410,000 + 35% of excess over ₱8,000,000';
+}
+
+const tax = basicTax + (taxableIncome - bracketFloor) * rate;</code></pre>
+					</details>
+				</section>
+
+				<section class="assignment-panel" id="project-sequences" aria-labelledby="assignment-title" hidden>
+					<div class="panel-intro">
+						<div class="panel-index">03 <span>—</span> 04</div>
+						<div><h3>Three loops.<br>One natural number.</h3><p>See how different loops can solve related counting problems.</p></div>
+					</div>
+					<div class="tool-area">
+						<div class="tool-controls">
+							<label class="field-label" for="sequence-n">FIRST N NATURAL NUMBERS</label>
+							<div class="input-with-unit"><input id="sequence-n" type="number" min="1" max="10000" step="1" placeholder="e.g. 10" inputmode="numeric"><span class="unit-suffix">N</span></div>
+							<button class="calculate-button" id="sequence-button" type="button">Run the loops <span aria-hidden="true">→</span></button>
+						</div>
+						<div class="result-block sequence-results" id="sequence-result" aria-live="polite">
+							<span class="result-label">LOOP RESULTS</span>
+							<p class="result-placeholder">Enter a whole number from 1 to 10,000.</p>
+						</div>
+					</div>
+					<div class="loop-key"><span><b>WHILE</b> Factorial</span><span><b>DO WHILE</b> Sum</span><span><b>FOR</b> Average</span></div>
+					<details class="code-disclosure">
+						<summary>See the spaghetti wires</summary>
+						<p class="code-caption">Three ways to count through the same numbers.</p>
+						<pre><code>const count = Number(input.value);
+let factorial = 1;
+let factor = 1;
+while (factor &lt;= count) {
+  factorial *= factor;
+  factor += 1;
+}
+
+let sum = 0;
+let current = 1;
+do {
+  sum += current;
+  current += 1;
+} while (current &lt;= count);
+
+let total = 0;
+for (let number = 1; number &lt;= count; number += 1) {
+  total += number;
+}
+const average = total / count;</code></pre>
+					</details>
+				</section>
+
+				<!-- okay, dave, show 'em your payroll skills. -->
+				<section class="assignment-panel" id="project-payroll" aria-labelledby="assignment-title" hidden>
+					<div class="panel-intro">
+						<div class="panel-index">04 <span>—</span> 04</div>
+						<div><h3>A clear day’s<br>pay, calculated.</h3><p>Add employees to the payroll list or remove an employee by line number.</p></div>
+					</div>
+					<div class="tool-area">
+						<div class="tool-controls">
+							<label class="field-label" for="employee-name">EMPLOYEE NAME</label>
+							<div class="input-with-unit"><input id="employee-name" type="text" placeholder="e.g. Alex Santos" autocomplete="name"></div>
+							<label class="field-label" for="days-worked">DAYS WORKED</label>
+							<div class="input-with-unit"><input id="days-worked" type="number" min="0" step="any" placeholder="e.g. 20" inputmode="decimal"></div>
+							<label class="field-label" for="daily-rate">DAILY RATE</label>
+							<div class="input-with-unit"><span class="unit-prefix">₱</span><input id="daily-rate" type="number" min="0" step="any" placeholder="e.g. 500" inputmode="decimal"><span class="unit-suffix">PHP</span></div>
+							<label class="field-label" for="pay-deduction">DEDUCTION AMOUNT</label>
+							<div class="input-with-unit"><span class="unit-prefix">₱</span><input id="pay-deduction" type="number" min="0" step="any" placeholder="e.g. 250" inputmode="decimal"><span class="unit-suffix">PHP</span></div>
+							<button class="calculate-button" id="pay-button" type="button">Add employee <span aria-hidden="true">→</span></button>
+						</div>
+						<div class="result-block" id="pay-result" aria-live="polite">
+							<span class="result-label">PAYROLL LIST</span>
+							<p class="result-placeholder">Add an employee to begin the payroll list.</p>
+						</div>
+					</div>
+					<div class="tax-reference">
+						<p class="tax-reference-title">EMPLOYEE PAYROLL</p>
+						<div class="tax-table-wrap" tabindex="0" aria-label="Employee payroll list">
+							<table class="tax-table payroll-table">
+								<thead><tr><th>No.</th><th>Employee Name</th><th>Days Worked</th><th>Daily Rate</th><th>Gross Pay</th><th>Deduction Amount</th><th>Net Pay</th></tr></thead>
+								<tbody id="payroll-list">
+									<tr class="payroll-empty"><td colspan="7">No employees in the payroll list yet.</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="payroll-delete">
+							<label class="field-label" for="delete-line">LINE NUMBER TO DELETE</label>
+							<div class="input-with-unit"><input id="delete-line" type="number" min="1" step="1" placeholder="e.g. 1" inputmode="numeric"></div>
+							<button class="calculate-button" id="delete-employee-button" type="button">Delete employee <span aria-hidden="true">−</span></button>
+						</div>
+					</div>
+					<details class="code-disclosure">
+						<summary>See the spaghetti wires</summary>
+						<p class="code-caption">The pay math and line-number deletion from <code>script.js</code>.</p>
+						<pre><code>const grossPay = daysWorked * dailyRate;
+employees.push({ name, daysWorked, dailyRate, grossPay, deduction, netPay: grossPay - deduction });
+renderPayrollList();
+
+const lineNumber = Number(lineInput.value);
+employees.splice(lineNumber - 1, 1);
+renderPayrollList();</code></pre>
+					</details>
+				</section>
+			</section>
+
+			<footer class="page-footer">
+				<div class="footer-note"><span>MADE BY DAVE</span><span>BUILT WITH CURIOSITY <span class="footer-star">✳</span></span></div>
+				<nav class="social-links" aria-label="Social media">
+					<a class="social-link" href="https://www.facebook.com/davelorence.paculanan" target="_blank" rel="noopener noreferrer" aria-label="Dave on Facebook">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.009 10.125 11.888v-8.407H7.078v-3.481h3.047V9.419c0-3.025 1.792-4.698 4.533-4.698 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.491 0-1.956.931-1.956 1.886v2.278h3.328l-.532 3.481h-2.796v8.407C19.612 23.082 24 18.092 24 12.073z"/></svg>
+						<span>Facebook</span>
+					</a>
+					<a class="social-link" href="https://www.instagram.com/divididivide/" target="_blank" rel="noopener noreferrer" aria-label="Dave on Instagram">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="instagram-dot" cx="17.5" cy="6.5" r="1"/></svg>
+						<span>Instagram</span>
+					</a>
+				</nav>
+			</footer>
+		</main>
+	</div>
+</body>
+</html>
